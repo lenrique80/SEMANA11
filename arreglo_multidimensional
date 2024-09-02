@@ -1,0 +1,27 @@
+def buscar_valor(matriz, valor):
+    """
+    Busca un valor en una matriz bidimensional.
+    
+    :param matriz: Lista de listas (matriz) con valores numéricos.
+    :param valor: Valor a buscar en la matriz.
+    :return: Tupla con la posición (fila, columna) si se encuentra el valor, None si no se encuentra.
+    """
+    for i, fila in enumerate(matriz):
+        if valor in fila:
+            return (i, fila.index(valor))
+    return None
+
+# Ejemplo de matriz y valor a buscar
+matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+valor_a_buscar = 5
+resultado = buscar_valor(matriz, valor_a_buscar)
+
+if resultado:
+    print(f"Valor {valor_a_buscar} encontrado en la posición: {resultado}")
+else:
+    print(f"Valor {valor_a_buscar} no encontrado en la matriz.")
