@@ -1,0 +1,29 @@
+def ordenar_fila(matriz, fila_index):
+    """
+    Ordena una fila específica de una matriz en orden ascendente.
+    
+    :param matriz: Lista de listas (matriz) con valores numéricos.
+    :param fila_index: Índice de la fila a ordenar.
+    :return: La matriz con la fila ordenada.
+    """
+    if 0 <= fila_index < len(matriz):
+        matriz[fila_index].sort()
+    return matriz
+
+# Ejemplo de matriz
+matriz = [
+    [3, 1, 2],
+    [6, 4, 5],
+    [9, 8, 7]
+]
+
+fila_a_ordenar = 1
+print("Matriz original:")
+for fila in matriz:
+    print(fila)
+
+matriz_ordenada = ordenar_fila(matriz, fila_a_ordenar)
+
+print(f"\nMatriz después de ordenar la fila {fila_a_ordenar}:")
+for fila in matriz_ordenada:
+    print(fila)
